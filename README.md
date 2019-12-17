@@ -53,6 +53,20 @@ input {
   }
 }
 ```
+## Adding Fields
+
+There are some attributes that can be included which will make searching logs easier as well as understanding the source of the logs easier. To do this we can use a filter that calls the add_field function.
+
+'''
+filter {
+      mutate {
+        add_field => {
+          "service_name" => "myservicename"
+          "hostname" => "%{host}"
+        }
+      }
+    }
+'''
 
 ## Parsing
 
@@ -120,6 +134,3 @@ Finally we have the SSL Information for the cipher and protocol
 ```
 
 At this point we have a fully structured log message with all the facets we may want to search on extracted.
-
-
-### Timestamps
