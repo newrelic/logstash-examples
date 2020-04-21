@@ -55,12 +55,13 @@ input {
 ```
 ## Adding Fields
 
-There are some attributes that can be included which will make searching logs easier as well as understanding the source of the logs easier. To do this we can use a filter that calls the [add_field](https://www.elastic.co/guide/en/logstash/current/plugins-filters-mutate.html#plugins-filters-mutate-add_field) function.
+There are some attributes that can be included which will make searching logs easier as well as understanding the source of the logs easier. To do this we can use a filter that calls the [add_field](https://www.elastic.co/guide/en/logstash/current/plugins-filters-mutate.html#plugins-filters-mutate-add_field) function. Logtype is an important field to add; it helps filter and organize your log data as well as link to parsing rules.
 
 ```
 filter {
       mutate {
         add_field => {
+          "logtype" => "nginx"
           "service_name" => "myservicename"
           "hostname" => "%{host}"
         }
