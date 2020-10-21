@@ -1,3 +1,5 @@
+[![Example Code header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/Example_Code.png)](https://opensource.newrelic.com/oss-category/#example-code) 
+
 # Example Configurations for Logstash
 
 ## Inputs
@@ -135,3 +137,14 @@ Finally we have the SSL Information for the cipher and protocol
 ```
 
 At this point we have a fully structured log message with all the facets we may want to search on extracted.
+
+**A note about vulnerabilities**
+
+As noted in our [security policy](../../security/policy), New Relic is committed to the privacy and security of our customers and their data. We believe that providing coordinated disclosure by security researchers and engaging with the security community are important means to achieve our security goals.
+
+If you believe you have found a security vulnerability in this project or any of New Relic's products or websites, we welcome and greatly appreciate you reporting it to New Relic through [HackerOne](https://hackerone.com/newrelic).
+
+If you would like to contribute to this project, review [these guidelines](https://opensource.newrelic.com/code-of-conduct/).
+
+## License
+logstash-examples is licensed under the [Apache 2.0](http://apache.org/licenses/LICENSE-2.0.txt) License.
